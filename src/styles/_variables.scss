@@ -1,0 +1,15 @@
+/* custom variable for font-awesome inclusion */
+$fa-font-path: '../../node_modules/font-awesome/fonts';
+
+// Color system
+// brand colors
+$brand-color-pebble: #5C686D; // RGB 92.104.109
+$brand-color-wave: #3EA7DD; // RGB 29.112.183
+
+//theme-colors adding 'inverse' option to theme colors
+$theme-colors: (
+        "inverse": $brand-color-pebble
+);
+
+// Fonts
+$font-family-sans-serif: 'Lato', sans-serif;

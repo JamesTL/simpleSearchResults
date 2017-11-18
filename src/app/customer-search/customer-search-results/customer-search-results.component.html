@@ -1,0 +1,20 @@
+<table class="table modulr-data-table mt-3">
+    <thead>
+    <tr>
+        <th>Account ID</th>
+        <th>Account Name</th>
+        <th>Account Number</th>
+        <th>Sort Code</th>
+        <th>Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let result of searchResults">
+        <td>{{result.id}}</td>
+        <td>{{result.name}}</td>
+        <td>{{result.identifiers[0]['accountNumber']}}</td>
+        <td>{{result.identifiers[0]['sortCode']}}</td>
+        <td>{{result.balance}}</td>
+    </tr>
+    </tbody>
+</table>
