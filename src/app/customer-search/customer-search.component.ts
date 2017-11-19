@@ -23,16 +23,15 @@ export class CustomerSearchComponent implements OnInit {
 
     ngOnInit() {
         this.setSearchStatus(false);
-        this.isEmptyResultSet(this.searchResults);
+        this.resultSetEmpty = this.isEmptyResultSet(this.searchResults);
     }
 
-    onSearch(event) {
+    onSearch(event):void {
         this.clearResults();
         this.setSearchResults(event);
-
     }
 
-    setSearchResults(event) {
+    setSearchResults(event):void {
 
         this.setSearchStatus(true);
 
@@ -47,13 +46,13 @@ export class CustomerSearchComponent implements OnInit {
                 this.searchResults = rawResults;
             }
 
-            this.isEmptyResultSet(this.searchResults);
+            this.resultSetEmpty = this.isEmptyResultSet(this.searchResults);
             this.setSearchStatus(false);
         });
     }
 
 
-    filterResults(results:Array<any>, searchString:string) {
+    filterResults(results:Array<any>, searchString:string):Array<any> {
 
         let filteredResults;
         let lowerCaseFilter = searchString.toLowerCase();
@@ -68,15 +67,15 @@ export class CustomerSearchComponent implements OnInit {
 
     clearResults():void {
         this.searchResults = [];
-        this.isEmptyResultSet(this.searchResults);
+        this.resultSetEmpty = this.isEmptyResultSet(this.searchResults);
     }
 
-    setSearchStatus(status:Boolean) {
+    setSearchStatus(status:Boolean):void {
         this.searchInProgress = status;
     }
 
     isEmptyResultSet(resultSet:Array<any>) {
-        !resultSet || resultSet.length === 0 ? this.resultSetEmpty = true : this.resultSetEmpty = false;
+        return !resultSet || resultSet.length === 0 ? true : false;
     }
 
 }
