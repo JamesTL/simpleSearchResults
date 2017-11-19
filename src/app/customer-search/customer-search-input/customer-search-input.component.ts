@@ -1,5 +1,6 @@
 import { Component,Output, EventEmitter, OnInit } from '@angular/core';
 
+
 @Component({
     selector: 'app-customer-search-input',
     templateUrl: './customer-search-input.component.html',
@@ -9,7 +10,7 @@ export class CustomerSearchInputComponent implements OnInit {
 
     @Output() doCustomerSearch = new EventEmitter();
 
-    filterString: string;
+    filterString:string;
 
     constructor() {
     }
@@ -18,8 +19,7 @@ export class CustomerSearchInputComponent implements OnInit {
     }
 
     customerSearch($event):void {
-                this.doCustomerSearch.emit({event:$event,searchString:this.filterString})
-
+        this.doCustomerSearch.emit({event: $event, searchString: this.filterString})
     }
 
 }

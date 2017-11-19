@@ -9,6 +9,16 @@
     </tr>
     </thead>
     <tbody>
+    <tr *ngIf="searchInProgress">
+        <td colspan="5">
+            Search in progress
+        </td>
+    </tr>
+    <tr *ngIf="resultSetEmpty">
+        <td colspan="5">
+            No results
+        </td>
+    </tr>
     <tr *ngFor="let result of searchResults">
         <td>{{result.id}}</td>
         <td>{{result.name}}</td>
