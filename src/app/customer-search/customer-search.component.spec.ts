@@ -403,7 +403,8 @@ describe('CustomerSearchComponent', () => {
                 }],
                 "customerId": "C0200098",
                 "externalReference": "Account 1"
-            }];;
+            }];
+            ;
             let searchString = ('sharedText');
 
             //act

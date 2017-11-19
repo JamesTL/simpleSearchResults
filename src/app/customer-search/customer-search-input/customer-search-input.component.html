@@ -7,7 +7,7 @@
       <div class="input-group mb-2 mr-sm-2 mb-sm-0">
         <input [(ngModel)]="filterString"  placeholder="Enter an account name or ID" class="form-control">
 
-        <div class="input-group-addon bg-primary"  (click)="customerSearch($event)">Go</div>
+        <div class="input-group-addon bg-primary"  id="searchBtn" (click)="customerSearch($event)">Go</div>
 
         <!--<input [(ngModel)]="filterString" (keyup)="filterChange($event)" placeholder="Enter an account name or ID"
                class="form-control">

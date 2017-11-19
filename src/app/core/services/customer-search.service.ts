@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CustomerSearchService {
 
-  apiString:String = '../../assets/data/results.json';
+  apiString:String = 'assets/data/results.json';
 
   constructor(private http:Http) {
   }
