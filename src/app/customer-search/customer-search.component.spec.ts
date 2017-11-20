@@ -42,16 +42,15 @@ describe('CustomerSearchComponent', () => {
 
     });
 
-    it('should onInit set resultSetEmpty  to true', ()=> {
+    it('should onInit set displayNoResultText to false', ()=> {
         //arrange
-        let expectedResult = true;
+        let expectedResult = false;
         //act
         fixture.detectChanges();
         //assert
-        expect(component.resultSetEmpty).toBe(expectedResult);
+        expect(component.displayNoResultText).toBe(expectedResult);
 
     });
-
 
     describe('it should return correct search results -  setSearchResults()', ()=> {
 
@@ -475,59 +474,6 @@ describe('CustomerSearchComponent', () => {
 
 
     });
-
-    it('should determine if searchResult collection is empty -  isEmptyResultSet()', ()=> {
-        //arrange
-        var testData = [];
-        let expectedResult = true
-
-        //act
-        let result = component.isEmptyResultSet(testData);
-        fixture.detectChanges();
-
-        //assert
-        expect(result).toBe(expectedResult);
-
-    })
-    it('should determine if searchResult collection is not empty -  isEmptyResultSet()', ()=> {
-        //arrange
-        var testData = [{
-            "id": "A0201C2N",
-            "name": "0e2a7d1c-033c-4622-920f-5bda21825682",
-            "balance": "74.44",
-            "currency": "GBP",
-            "status": "ACTIVE",
-            "identifiers": [{
-                "type": "SCAN",
-                "accountNumber": "00001531",
-                "sortCode": "000000"
-            }],
-            "customerId": "C02013ZU",
-            "externalReference": "GOJI-0017111"
-        }, {
-            "id": "A02017NU",
-            "name": "1010 SOFTWARE LTD",
-            "balance": "46.91",
-            "currency": "GBP",
-            "status": "ACTIVE",
-            "identifiers": [{
-                "type": "SCAN",
-                "accountNumber": "00001232",
-                "sortCode": "000000"
-            }],
-            "customerId": "C0200098",
-            "externalReference": "Account 1"
-        }];
-        let expectedResult = false;
-
-        //act
-        let result = component.isEmptyResultSet(testData);
-        fixture.detectChanges();
-
-        //assert
-        expect(result).toBe(expectedResult);
-
-    })
 
 
 });

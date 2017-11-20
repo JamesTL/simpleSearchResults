@@ -1,8 +1,29 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.site-content {
+  min-height: 100%;
+
+}
+.site-content-inside{
+  padding-bottom: 90px;
+}
+footer{
+  height: 90px;
+  margin-top: -90px;
+}
 
 /* Page header */
-.modulr-page-header{
+.modulr-page-header {
   background-image: url('../assets/images/bg-blocks.svg');
   background-repeat: no-repeat;
   background-position: right;
 
+}
+
+/* cursor */
+.cursor-pointer {
+  cursor: pointer;
 }

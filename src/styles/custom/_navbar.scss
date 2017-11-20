@@ -1,0 +1,9 @@
+/* main nav*/
+.navabar-main {
+  padding: 0;
+
+  & li a.active {
+
+    border-bottom: 3px solid $brand-color-spray;
+  }
+}

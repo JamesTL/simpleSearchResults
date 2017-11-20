@@ -1,7 +1,15 @@
 
 .modulr-data-table {
+  color: lighten($body-color, 25%);
+  border-bottom: 1px solid #e9ecef;
 
-  & th{
-    background-color: lighten($brand-color-pebble, 55%); ;
+  & thead th {
+    background-color: lighten($brand-color-pebble, 55%);
+    border-bottom: 2px solid map-get($theme-colors, 'primary');
+    color: $body-color;
+  }
+
+  .account-balance{
+    color: $body-color;
   }
 }

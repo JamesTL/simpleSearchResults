@@ -1,21 +1,32 @@
-<!--app  main header component-->
-<app-app-main-header></app-app-main-header>
-<!-- app main navbar-->
-<app-app-main-nav></app-app-main-nav>
+<div class="site-content">
+    <div class="site-content-inside">
+        <!--app  main header component-->
+        <header>
+            <app-app-main-header></app-app-main-header>
+        </header>
+        <!-- app main navbar-->
+        <nav>
+            <app-app-main-nav></app-app-main-nav>
+        </nav>
 
-
-<div class="container flex-grow">
-    <ul class="nav">
-        <li class="nav-item">
-            <a href="#" class="nav-link">Customers</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">Approvals</a>
-        </li>
-    </ul>
-    <!-- app customer search-->
-    <app-customer-search></app-customer-search>
+        <!-- app main content-->
+        <main>
+            <div class="container">
+                <ul class="nav nav-tabs modulr-nav-tabs my-3">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active pl-0 h4">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link h4">Approvals</a>
+                    </li>
+                </ul>
+                <!-- app customer search-->
+                <app-customer-search></app-customer-search>
+            </div>
+        </main>
+    </div>
 </div>
-
 <!-- app main navbar-->
-<app-app-main-footer></app-app-main-footer>
+<footer>
+    <app-app-main-footer></app-app-main-footer>
+</footer>

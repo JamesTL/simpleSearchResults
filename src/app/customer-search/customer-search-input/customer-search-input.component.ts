@@ -1,4 +1,4 @@
-import { Component,Output, EventEmitter, OnInit } from '@angular/core';
+import { Component,Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component,Output, EventEmitter, OnInit } from '@angular/core';
     templateUrl: './customer-search-input.component.html',
     styleUrls: ['./customer-search-input.component.scss']
 })
-export class CustomerSearchInputComponent implements OnInit {
+export class CustomerSearchInputComponent {
 
     @Output() doCustomerSearch = new EventEmitter();
 
@@ -14,12 +14,7 @@ export class CustomerSearchInputComponent implements OnInit {
 
     constructor() {
     }
-
-    ngOnInit() {
-    }
-
     customerSearch($event):void {
         this.doCustomerSearch.emit({event: $event, searchString: this.filterString})
     }
-
 }

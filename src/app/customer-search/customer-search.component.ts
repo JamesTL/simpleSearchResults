@@ -10,12 +10,10 @@ import {CustomerSearchService} from './../core/services/customer-search.service'
 })
 export class CustomerSearchComponent implements OnInit {
 
-
     searchString:string;
     searchResults:Array<any>;
-
     searchInProgress:Boolean;
-    resultSetEmpty:Boolean;
+    displayNoResultText:Boolean;
 
 
     constructor(private customerSearchService:CustomerSearchService) {
@@ -23,7 +21,7 @@ export class CustomerSearchComponent implements OnInit {
 
     ngOnInit() {
         this.setSearchStatus(false);
-        this.resultSetEmpty = this.isEmptyResultSet(this.searchResults);
+        this.displayNoResultText = false;
     }
 
     onSearch(event):void {
@@ -46,9 +44,14 @@ export class CustomerSearchComponent implements OnInit {
                 this.searchResults = rawResults;
             }
 
-            this.resultSetEmpty = this.isEmptyResultSet(this.searchResults);
+            if (this.searchResults.length === 0) {
+                this.displayNoResultText = true;
+            }
+
             this.setSearchStatus(false);
+
         });
+
     }
 
 
@@ -67,15 +70,12 @@ export class CustomerSearchComponent implements OnInit {
 
     clearResults():void {
         this.searchResults = [];
-        this.resultSetEmpty = this.isEmptyResultSet(this.searchResults);
+        this.displayNoResultText = false;
     }
 
     setSearchStatus(status:Boolean):void {
         this.searchInProgress = status;
     }
 
-    isEmptyResultSet(resultSet:Array<any>) {
-        return !resultSet || resultSet.length === 0 ? true : false;
-    }
 
 }

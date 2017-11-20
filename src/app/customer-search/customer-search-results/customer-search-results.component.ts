@@ -9,6 +9,6 @@ export class CustomerSearchResultsComponent {
 
     @Input() searchResults:Array<any>;
     @Input() searchInProgress:Boolean;
-    @Input() resultSetEmpty:Boolean;
+    @Input() displayNoResultText:Boolean;
 
 }

@@ -1,0 +1,15 @@
+
+.modulr-nav-tabs {
+
+  border-bottom: 0;
+
+  & .nav-link {
+    border: 0;
+    color: lighten($brand-color-pebble, 25%);
+
+    &.active {
+
+      color: $link-color;
+    }
+  }
+}

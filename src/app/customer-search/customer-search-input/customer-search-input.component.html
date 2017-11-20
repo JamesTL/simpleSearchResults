@@ -1,23 +1,17 @@
 <div class="d-flex flex-row justify-content-between align-items-end">
+    <div class="w-50">
+        <p class="mb-0">Search for an account by account name or ID</p>
 
-  <div class="w-50">
-    <p class="mb-0">Search for an account by account name or <abbr title="Identity">ID</abbr></p>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0  w-75 ">
+                <input class="form-control py-3" [(ngModel)]="filterString" placeholder="Enter an account name or ID"/>
 
-    <div class="form-inline">
-      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-        <input [(ngModel)]="filterString"  placeholder="Enter an account name or ID" class="form-control">
-
-        <div class="input-group-addon bg-primary"  id="searchBtn" (click)="customerSearch($event)">Go</div>
-
-        <!--<input [(ngModel)]="filterString" (keyup)="filterChange($event)" placeholder="Enter an account name or ID"
-               class="form-control">
-
-        <div class="input-group-addon bg-primary" (click)="loadData()">Go</div>-->
-      </div>
+                <div class="input-group-addon bg-primary text-white border-0 px-3 cursor-pointer" id="searchBtn"
+                     (click)="customerSearch($event)">Go</div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div>
-    <button type="submit" class="btn btn-primary">Create new customer</button>
-
-  </div>
+    <div>
+        <a href="#" class="btn btn-primary">Create new customer</a>
+    </div>
 </div>

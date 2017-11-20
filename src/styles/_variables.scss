@@ -5,11 +5,14 @@ $fa-font-path: '../../node_modules/font-awesome/fonts';
 // brand colors
 $brand-color-pebble: #5C686D; // RGB 92.104.109
 $brand-color-wave: #3EA7DD; // RGB 29.112.183
+$brand-color-spray:#63F2CB;// RGB 99.242.203
 
 //theme-colors adding 'inverse' option to theme colors
 $theme-colors: (
+        "primary":$brand-color-wave,
         "inverse": $brand-color-pebble
 );
 
 // Fonts
+$body-color:$brand-color-pebble;
 $font-family-sans-serif: 'Lato', sans-serif;

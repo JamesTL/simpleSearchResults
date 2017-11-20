@@ -7,8 +7,5 @@ describe('fe-test-modulr-finance App', () => {
     page = new FeTestModulrFinancePage();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
+  
 });
