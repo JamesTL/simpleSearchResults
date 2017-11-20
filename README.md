@@ -14,9 +14,11 @@ Both the CLI and generated project have dependencies that require Node 6.9.0 or 
 
 ## Install SimpleBlog project
 
-Clone repository into local directory.
+Create a new local directory 
 
 Navigate to project directory.
+
+Copy and paste files into this directory.
 
 Run `npm install` to install project dependencies.
 
