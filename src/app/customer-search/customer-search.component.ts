@@ -58,7 +58,7 @@ export class CustomerSearchComponent implements OnInit {
     filterResults(results:Array<any>, searchString:string):Array<any> {
 
         let filteredResults;
-        let lowerCaseFilter = searchString.toLowerCase();
+        let lowerCaseFilter = searchString.toLowerCase().trim();
 
         filteredResults = results.filter(function (result) {
 
